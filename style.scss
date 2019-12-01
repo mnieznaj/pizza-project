@@ -19,6 +19,7 @@ body {
     height: 100%;
     color: $dark-text-color;
     font-family: 'Roboto', sans-serif;
+    //overflow: scroll;//Błąd ze znikającym plusem i nie przewija do początki
 
     nav{
         color: $light-text-color;
@@ -74,16 +75,18 @@ body {
         .offers{
             display: flex;
             justify-content: space-evenly;
-
+            overflow: auto;
             
             .option{
                 display: flex;
                 flex-direction: column;
                 justify-content: space-around;
-                
-                width: 375px;
+                order:-1;
+
+                min-width: 375px;//Błąd ze znikającym plusem
                 height: 400px;
                 padding: 30px;
+                margin: 10px;
                 
                 background-color: $option-background-color;
                 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -121,6 +124,7 @@ body {
                     display: flex;
                     align-self: center;
                     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                    cursor: pointer;
 
                     .plus-sign{
                         width:9px;
@@ -137,6 +141,10 @@ body {
                 }
 
                 
+            }
+
+            .add{
+                order:1;
             }
 
             button{
@@ -188,6 +196,29 @@ button{
 a{
     text-decoration: none;
     color: $light-text-color;
+}
+
+div.add-option{
+    width:113px;
+    height: 113px;
+    background-color: $plus-background-color;
+    border-radius: 56px;
+    display: flex;
+    align-self: center;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    .plus-sign{
+        width:9px;
+        height:45px;
+        background-color:$plus-color;
+
+        display: flex;
+        align-self: center;
+        position: absolute;
+    }
+    .horizontal-line{
+        transform: rotate(90deg);
+    }
 }
 
 //HEADERS

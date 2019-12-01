@@ -77,6 +77,7 @@ body .content .offers {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  overflow: auto;
 }
 
 body .content .offers .option {
@@ -89,9 +90,13 @@ body .content .offers .option {
           flex-direction: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  width: 375px;
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
+  min-width: 375px;
   height: 400px;
   padding: 30px;
+  margin: 10px;
   background-color: #F3F2F2;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -141,6 +146,7 @@ body .content .offers .option div.add-option {
       align-self: center;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
 }
 
 body .content .offers .option div.add-option .plus-sign {
@@ -158,6 +164,12 @@ body .content .offers .option div.add-option .plus-sign {
 body .content .offers .option div.add-option .horizontal-line {
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
+}
+
+body .content .offers .add {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
 }
 
 body .content .offers button {
@@ -205,6 +217,37 @@ button {
 a {
   text-decoration: none;
   color: #F5F5F5;
+}
+
+div.add-option {
+  width: 113px;
+  height: 113px;
+  background-color: #DCDADA;
+  border-radius: 56px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+      align-self: center;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+div.add-option .plus-sign {
+  width: 9px;
+  height: 45px;
+  background-color: #C4C4C4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+      align-self: center;
+  position: absolute;
+}
+
+div.add-option .horizontal-line {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
 }
 
 h1 {
