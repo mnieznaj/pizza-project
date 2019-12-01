@@ -63,6 +63,7 @@ body .content {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  overflow-x: auto;
 }
 
 body .content h1 {
@@ -71,13 +72,10 @@ body .content h1 {
 }
 
 body .content .offers {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  overflow: auto;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  overflow-x: auto;
 }
 
 body .content .offers .option {
@@ -217,6 +215,7 @@ button {
 a {
   text-decoration: none;
   color: #F5F5F5;
+  cursor: pointer;
 }
 
 div.add-option {
@@ -248,6 +247,10 @@ div.add-option .plus-sign {
 div.add-option .horizontal-line {
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
+}
+
+.hide-element {
+  display: none;
 }
 
 h1 {

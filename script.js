@@ -15,18 +15,21 @@ function checkOptionsProfitability(option){
 };
 
 
+
 //TO CO JEST PONIZEJ NARAZIE NIE DZIAŁA LUB NIE JEST UMIESZCZONE W APCE
 
-let profitabilityResults= [];
+let profitabilityResults= [0,null];
 
 function checkGeneralProfitability(){
     let noOfOptions = document.getElementById('offers').getElementsByClassName('option').length-1;
 
-    for(noOfOptions; noOfOptions>0; noOfOptions-1){
+    for(i = noOfOptions; i>=0; i-1){
 
-        let newResult = [checkOptionsProfitability(noOfOptions),"option-number-"+noOfOptions];
+        let newResult = [checkOptionsProfitability(i),"option-number-"+i];
 
-        profitabilityResults = profitabilityResults.push(newResult);
+        if(profitabilityResults[0] < newResult[0]){
+        profitabilityResults = newResult;
+        }
     };
     return profitabilityResults;
     //sprawdzić kolejne pozycje w tabeli i podać największą

@@ -65,7 +65,7 @@ body {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        
+        overflow-x: auto;
 
         h1{
             width: 100%;
@@ -73,9 +73,8 @@ body {
         }
 
         .offers{
-            display: flex;
-            justify-content: space-evenly;
-            overflow: auto;
+            display: inline-flex;
+            overflow-x: auto;
             
             .option{
                 display: flex;
@@ -196,6 +195,7 @@ button{
 a{
     text-decoration: none;
     color: $light-text-color;
+    cursor: pointer;
 }
 
 div.add-option{
@@ -219,6 +219,10 @@ div.add-option{
     .horizontal-line{
         transform: rotate(90deg);
     }
+}
+
+.hide-element{
+    display:none;
 }
 
 //HEADERS
