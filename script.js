@@ -43,9 +43,15 @@ function checkGeneralProfitability(){
     console.log(profitabilityResults);
 }
 
+class optionData {
+    constructor(quantity, diameter, price){
+        
+    }
+};
+
 function showResults(){
     let result = document.getElementById('results');
-    result.innerHTML = '<div class="option"><h2>Najlepszą jest opcja nr X</h2><div><p>Ilość sztuk w zestawie:</p><input type="text" name="quantity" value=""><br><p>Średnica:</p><input type="text" name="diameter" value=""><br><p>Cena:</p><input type="text" name="price" value=""><br></div><button>Sprawdź ponownie</button></div>';
+    result.innerHTML = '<div class="option"><h2>Najlepszą jest opcja nr X</h2><div><p>Ilość sztuk w zestawie:</p><p></p><br><p>Średnica:</p><p></p><br><p>Cena:</p><p></p><br></div><button>Sprawdź ponownie</button></div>';
     result.classList.toggle('hide-element');
     
     document.getElementById('offers').classList.toggle('hide-element');

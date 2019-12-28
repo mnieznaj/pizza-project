@@ -144,6 +144,7 @@ div.add-option {
       align-self: center;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  position: relative;
 }
 
 div.add-option .plus-sign {
@@ -235,6 +236,6 @@ h2 {
 }
 
 .hide-element {
-  display: none;
+  display: none !important;
 }
 /*# sourceMappingURL=style.css.map */
