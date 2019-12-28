@@ -76,72 +76,6 @@ body {
             display: inline-flex;
             overflow-x: auto;
             
-            .option{
-                display: flex;
-                flex-direction: column;
-                justify-content: space-around;
-                order:-1;
-
-                min-width: 375px;//Błąd ze znikającym plusem
-                height: 400px;
-                padding: 30px;
-                margin: 10px;
-                
-                background-color: $option-background-color;
-                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-                border-radius: 23px;
-
-                h2{
-                    margin: 0 auto 0;
-                }
-
-                div{
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-evenly;
-
-                    p{
-                        padding-bottom: 6px;
-                    }
-
-                    input{
-                        height: 25px;
-                        width: 80px;
-    
-                        background: #FFFFFF;
-                        box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-                        border: none;
-                        border-radius: 3px;
-                    }
-                }
-
-                div.add-option{
-                    width:113px;
-                    height: 113px;
-                    background-color: $plus-background-color;
-                    border-radius: 56px;
-                    display: flex;
-                    align-self: center;
-                    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-                    cursor: pointer;
-
-                    .plus-sign{
-                        width:9px;
-                        height:45px;
-                        background-color:$plus-color;
-
-                        display: flex;
-                        align-self: center;
-                        position: absolute;
-                    }
-                    .horizontal-line{
-                        transform: rotate(90deg);
-                    }
-                }
-
-                
-            }
-
             .add{
                 order:1;
             }
@@ -182,9 +116,7 @@ body {
                 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
                 border-radius: 8px;
             }
-        }
-
-        
+        }  
     }
 }
 
@@ -221,8 +153,44 @@ div.add-option{
     }
 }
 
-.hide-element{
-    display:none;
+.option{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    order:-1;
+
+    min-width: 375px;//Błąd ze znikającym plusem
+    height: 400px;
+    padding: 30px;
+    margin: 10px;
+    
+    background-color: $option-background-color;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 23px;
+
+    h2{
+        margin: 0 auto 0;
+    }
+
+    div{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        p{
+            padding-bottom: 6px;
+        }
+
+        input{
+            height: 25px;
+            width: 80px;
+
+            background: #FFFFFF;
+            box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border: none;
+            border-radius: 3px;
+        }
+    }
 }
 
 //HEADERS
@@ -242,4 +210,10 @@ h2{
     font-weight: bold;
     font-size: 30px;
     line-height: 48px;
+}
+
+//HIDE ELEMENT
+
+.hide-element{
+    display:none;
 }

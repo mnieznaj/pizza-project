@@ -7,30 +7,46 @@ function addNewOption(){
 
 function checkOptionsProfitability(option){
     let quantity = document.getElementById('option-'+option+'-1').value;
+    console.log(quantity);
     let diameter = document.getElementById('option-'+option+'-2').value;
+    console.log(diameter);
     let price = document.getElementById('option-'+option+'-3').value;
+    console.log(price);
 
     let profitability = ((Math.pow(diameter,2) * Math.PI) * quantity)/price;
+    console.log(profitability);
     return profitability;
 };
 
-
-
-//TO CO JEST PONIZEJ NARAZIE NIE DZIAŁA LUB NIE JEST UMIESZCZONE W APCE
-
-let profitabilityResults= [0,null];
+let profitabilityResults = [0];
 
 function checkGeneralProfitability(){
     let noOfOptions = document.getElementById('offers').getElementsByClassName('option').length-1;
-
-    for(i = noOfOptions; i>=0; i-1){
-
+    console.log(noOfOptions);
+/*
+    for(let i = noOfOptions; i>0; i-1){
         let newResult = [checkOptionsProfitability(i),"option-number-"+i];
-
         if(profitabilityResults[0] < newResult[0]){
         profitabilityResults = newResult;
-        }
+        };
     };
-    return profitabilityResults;
-    //sprawdzić kolejne pozycje w tabeli i podać największą
+*/
+    while(noOfOptions > 0){
+        let newResult = [checkOptionsProfitability(noOfOptions),"option-number-"+noOfOptions];
+        console.log('new result '+newResult);
+        if(profitabilityResults[0] < newResult[0]){
+        profitabilityResults = newResult;
+        };
+        console.log(profitabilityResults[0]);
+        noOfOptions --;
+    }
+    console.log(profitabilityResults);
+}
+
+function showResults(){
+    let result = document.getElementById('results');
+    result.innerHTML = '<div class="option"><h2>Najlepszą jest opcja nr X</h2><div><p>Ilość sztuk w zestawie:</p><input type="text" name="quantity" value=""><br><p>Średnica:</p><input type="text" name="diameter" value=""><br><p>Cena:</p><input type="text" name="price" value=""><br></div><button>Sprawdź ponownie</button></div>';
+    result.classList.toggle('hide-element');
+    
+    document.getElementById('offers').classList.toggle('hide-element')
 }
