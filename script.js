@@ -48,5 +48,5 @@ function showResults(){
     result.innerHTML = '<div class="option"><h2>Najlepszą jest opcja nr X</h2><div><p>Ilość sztuk w zestawie:</p><input type="text" name="quantity" value=""><br><p>Średnica:</p><input type="text" name="diameter" value=""><br><p>Cena:</p><input type="text" name="price" value=""><br></div><button>Sprawdź ponownie</button></div>';
     result.classList.toggle('hide-element');
     
-    document.getElementById('offers').classList.toggle('hide-element')
+    document.getElementById('offers').classList.toggle('hide-element');
 }
