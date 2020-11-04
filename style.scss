@@ -23,51 +23,6 @@ $light-text-color: #F5F5F5;
     height: 100%;
     color: $dark-text-color;
     font-family: 'Roboto', sans-serif;
-    //overflow: scroll;//Błąd ze znikającym plusem i nie przewija do początki
-
-    .menu{
-        color: $light-text-color;
-        height: 80px;
-        width: 100%;
-        background-color: $redish;
-        display: flex;
-        justify-content: space-around;
-        padding:20px;
-
-        font-size: 23px;
-
-        .menu__logo{
-            height: 55px;
-            width: 55px;
-            fill: $light-text-color;
-            transform: rotate(22deg);
-        }
-
-        
-        .menu__item{
-            list-style: none;
-            display: inline-block;
-            padding: 10px;
-            letter-spacing: 2px;
-        }
-
-        .menu__button{
-            background-color: transparent;
-
-            border: 3px solid $light-text-color;
-            border-radius: 5px;
-            
-            color: $light-text-color;
-            font-size: 23px;
-            padding: 5px;
-        }
-
-        .menu__link{
-            text-decoration: none;
-            color: $light-text-color;
-            cursor: pointer;
-        }
-    }
 
     .content{
         width: 100%;
@@ -82,8 +37,6 @@ $light-text-color: #F5F5F5;
         }
 
         .content__offers-section{
-            // display: inline-flex;
-            // width: auto;
             display: flex;
             flex-direction: row;
             justify-content: center;
@@ -105,9 +58,9 @@ $light-text-color: #F5F5F5;
 
 .button__submit {
     cursor: pointer;
-    width: 100px;
+    width: 150px;
     min-height: 45px;
-    padding: 5px;
+    padding: 10px;
 
     color:$light-text-color;
     font-size: 1.3rem;
@@ -117,9 +70,14 @@ $light-text-color: #F5F5F5;
     font-weight: normal;
 
     background: $greenish;
-    // box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 8px;
     border-color: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+
+    &:first-child{
+        margin-right: 30px;
+    }
 
     .button__submit--add-class{
         height: 33px;
@@ -144,8 +102,8 @@ $light-text-color: #F5F5F5;
     justify-content: space-around;
     order:-1;
 
-    min-width: 300px;
-    height: 300px;
+    width: 320px;
+    height: 320px;
     padding: 30px;
     margin: 10px;
     
@@ -153,22 +111,20 @@ $light-text-color: #F5F5F5;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 23px;
 
-    .option__h2{
-        margin: 0 auto 0;
-    }
-
     form{
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
+        align-self: center;
 
-        p{
+        .option__label{
             padding-bottom: 6px;
         }
 
         .option__input{
-            height: 25px;
-            width: 80px;
+            height: 26px;
+            // width: 80px;
+            width: 150px;
 
             background: #FFFFFF;
             box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -179,7 +135,6 @@ $light-text-color: #F5F5F5;
 }
 
 //HEADERS
-
 h1{
     font-family: Roboto;
     font-style: normal;
@@ -187,6 +142,8 @@ h1{
     font-size: 45px;
     line-height: 61px;
     text-align: center;
+
+    margin-bottom: 30px;
 }
 
 h2{
@@ -195,6 +152,16 @@ h2{
     font-weight: bold;
     font-size: 30px;
     line-height: 48px;
+}
+
+h3{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
+    text-align: center;
+
 }
 
 //HIDE ELEMENT

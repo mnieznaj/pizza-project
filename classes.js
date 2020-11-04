@@ -1,10 +1,10 @@
 export class optionParameters {
-    name: string;
-    quantity: number;
-    diameter: number;
-    price: number;
+    name;
+    quantity;
+    diameter;
+    price;
 
-    constructor(name : string, quantity: number, diameter: number, price: number){
+    constructor(name , quantity, diameter, price){
         this.name = name;
         this.quantity = quantity;
         this.diameter = diameter;
@@ -12,10 +12,10 @@ export class optionParameters {
     }
 };
 export class Result {
-    name: string;
-    value: number;
+    name;
+    value;
 
-    constructor(name: string, value: number){
+    constructor(name, value){
         this.name = name;
         this.value = value
     }
